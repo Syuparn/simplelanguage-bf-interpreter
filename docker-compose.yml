@@ -1,0 +1,8 @@
+version : "3"
+services:
+  simple-language:
+    image: ghcr.io/syuparn/simplelanguage:0.1.0
+    # execute bf interpreter
+    entrypoint: sh -c "cat hello.bf | sl bf.sl"
+    volumes:
+      - .:/app
